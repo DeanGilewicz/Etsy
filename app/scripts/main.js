@@ -78,25 +78,26 @@ $(document).ready(function () {
 
   items.results.forEach( function(x) {
 
-      itemTitle = x.title;
-      console.log(itemTitle);
+      itemTitle = "<p>" + x.title + "</p>";
+      // console.log(itemTitle);
 
-      itemPrice = x.price + " " + x.currency_code;
-      console.log(itemPrice);
+      itemPrice = "<p>" + x.price + " " + x.currency_code + "</p>";
+      // console.log(itemPrice);
 
-      itemSN = x.Shop.shop_name;
-      console.log(itemSN);
+      itemSN = "<p>" + x.Shop.shop_name + "<p>";
+      // console.log(itemSN);
 
       x.Images.forEach (function(y) {
-      itemImage = y.url_170x135;
-      console.log(itemImage);
+      itemImage = "<img src= '" + y.url_170x135 + "'/>'";
+      // console.log(itemImage);
       })
+
+      display = "<li>" + itemTitle + itemPrice + itemSN + itemImage + "</li>";
+
+      container.append(display);
 
   });
 
-  display = itemTitle + itemPrice + itemSN + itemImage;
-
-  container.append(display);
 
 
 });

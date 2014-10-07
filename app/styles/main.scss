@@ -36,9 +36,8 @@ body {
   background-color: blue;
 }
 
-.col3 {
+li {
   @include span-columns(3 of 9);
-  @include truncate;
   background-color: green;
 
 }
