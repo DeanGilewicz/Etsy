@@ -1,14 +1,35 @@
 $(document).ready(function () {
 
-  var currencyUSD = etsy.filter(function(x) {
-      return x.currency_code === "USD";
+  var container = $('#drinks');
+  var itemTitle;
+  var itemPrice;
+  var itemSN;
+  var itemImage;
+
+  items.results.forEach ( function(x) {
+    itemTitle = x.title;
+    console.log(itemTitle);
   });
 
-  var itemPrice = currencyUSD.map(function(y) {
-    return y.title + " $" + y.price;
+
+  items.results.forEach ( function(x) {
+    itemPrice = x.price + " " + x.currency_code;
+    console.log(itemPrice);
   });
 
-  console.log(itemPrice);
+
+  items.results.forEach ( function(x) {
+    itemSN = x.Shop.shop_name;
+    console.log(itemSN);
+  });
+
+
+  items.results.forEach ( function(x) {
+    x.Images.forEach (function(y) {
+    itemImage = y.url_170x135;
+    console.log(itemImage);
+    })
+  });
 
 
 
