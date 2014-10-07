@@ -2,7 +2,14 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
-// Neat
+// Mixins
+
+@mixin truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 
 // Custom Styles
@@ -31,7 +38,9 @@ body {
 
 .col3 {
   @include span-columns(3 of 9);
+  @include truncate;
   background-color: green;
+
 }
 
 .footer {
