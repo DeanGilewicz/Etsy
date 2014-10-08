@@ -24,12 +24,6 @@ body {
   background-color: gray;
 }
 
-h1 {
-  font-size: 30px;
-  font-weight: thin;
-  color: HSLA(17, 68%, 49%, 1);
-}
-
 .sidebar {
   @include span-columns(3);
   background-color: red;
@@ -44,21 +38,8 @@ h1 {
 
 li {
   @include span-columns(3 of 9);
-  @include omega(3n);
-  @include truncate;
-  font-size: 12px;
   background-color: green;
-  position: relative;
-}
 
-.pics {
-  max-width: 100%;
-}
-
-.hover {
-  display: visible;
-  background-color: black;
-  width: 10px;
 }
 
 .footer {

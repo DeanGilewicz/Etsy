@@ -74,34 +74,31 @@ $(document).ready(function () {
       itemPrice,
       itemSN,
       itemImage,
-      display;
+      display,
+      icons;
 
   items.results.forEach( function(x) {
 
-      itemTitle = "<p>" + x.title + "</p>";
+      icons = "<img class='icon1' src='" + 'https://raw.githubusercontent.com/tiy-atlanta-js/Assignments/master/Assignment%2008/assets/hamburger.png' + "'/>" + "<img class='icon2' src='" + 'https://raw.githubusercontent.com/tiy-atlanta-js/Assignments/master/Assignment%2008/assets/heart.png' + "'/>";
+
+      itemTitle = "<p class='it'>" + x.title + "</p>";
       // console.log(itemTitle);
 
-      itemPrice = "<p class='price'>" + x.price + " " + x.currency_code + "</p>";
+      itemPrice = "<p class='ip'>" + x.price + " " + x.currency_code + "</p>";
       // console.log(itemPrice);
 
-      itemSN = "<p class='store'>" + x.Shop.shop_name + "<p>";
+      itemSN = "<p class='isn'>" + x.Shop.shop_name + "<p>";
       // console.log(itemSN);
 
-      x.Images.forEach (function(y) {
-      itemImage = "<img class='pics' src= '" + y.url_170x135 + "'/>'";
+      itemImage = "<img src= '" + x.Images[0].url_170x135 + "'/>'";
       // console.log(itemImage);
-      });
 
-      display = "<li>" + itemImage + itemTitle + itemSN + itemPrice + "</li>";
+      display = "<li>" + icons + itemImage + itemTitle + itemSN + itemPrice + "</li>";
 
       container.append(display);
 
   });
 
-    $('img').hover(function() {
-      $(this).addClass("hover");
-      }, function() {
-      $(this).removeClass("hover");
-    });
+
 
 });
