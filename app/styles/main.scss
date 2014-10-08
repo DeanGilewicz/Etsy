@@ -42,7 +42,10 @@ body {
 .resultBar {
   height: 40px;
   width: 100%;
+}
 
+ul {
+  margin: 0 auto;
 }
 
 .sidebar {
@@ -56,8 +59,7 @@ body {
 
 li {
   @include span-columns(3);
-  // @include omega(3n);
-  margin-top: 25px;
+  // margin-top: 25px;
   position: relative;
   height: 220px;
   width: 220px;
