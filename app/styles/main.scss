@@ -22,10 +22,28 @@ body {
 }
 
 .header {
-  margin-left: 200px;
+  margin-left: 170px;
 
   h1 {
     display: inline-block;
+    margin-right: 25px;
+  }
+
+  .searchField {
+    width: 250px;
+    height: 30px;
+    border: 1px solid HSLA(192, 58%, 49%, 1);
+    padding-left: 10px;
+    font-size: 14px;
+    color: HSLA(0, 0%, 67%, 1);
+  }
+
+  .searchBtn {
+    background-color: HSLA(195, 51%, 54%, 1);
+    border: 1px solid HSLA(191, 47%, 42%, 1);
+    padding: 4px 10px 6px 10px;
+    margin-left: -6px;
+    color: HSLA(0, 0%, 100%, 1);
   }
 }
 
@@ -40,7 +58,7 @@ body {
 }
 
 .resultBar {
-  height: 40px;
+  height: 20px;
   width: 100%;
 }
 
@@ -54,12 +72,13 @@ ul {
   height: 2200px;
   width: 220px;
   margin-left: 60px;
+  margin-top: 25px;
   background-color: HSLA(0, 0%, 100%, 1);
 }
 
 li {
   @include span-columns(3);
-  // margin-top: 25px;
+  margin-top: 25px;
   position: relative;
   height: 220px;
   width: 220px;
