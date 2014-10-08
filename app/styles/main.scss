@@ -30,13 +30,40 @@ body {
 li {
   @include span-columns(3);
     @include omega(3n);
-    position:relative;
-    height:220px;
-    width:220px;
+    position: relative;
+    height: 220px;
+    width: 220px;
     border: 2px solid black;
     border-radius: 4px;
-    font-size:12px;
+    font-size: 12px;
     background-color: HSLA(0, 0%, 100%, 1);
+
+    .icon1 {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      height: 23px;
+      width: 23px;
+      border: 1px solid HSLA(219, 13%, 78%, 1);
+      border-radius: 3px;
+      background-color: HSLA(0, 0%, 100%, 1);
+      padding: 2px;
+      // display: none;
+    }
+
+    .icon2 {
+    position: absolute;
+    top: 5px;
+    right: 40px;
+    height: 23px;
+    width: 23px;
+    border: 1px solid HSLA(219, 13%, 78%, 1);
+    border-radius: 3px;
+    background-color: HSLA(0, 0%, 100%, 1);
+    padding: 2px;
+    // display: none;
+    }
+
 }
 
 .footer {
