@@ -5,7 +5,6 @@
 // Mixins
 
 @mixin truncate {
-  width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -14,32 +13,30 @@
 
 // Custom Styles
 body {
-  background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
-}
-
-.container {
-  @include outer-container;
-  background-color: gray;
 }
 
 .sidebar {
-  @include span-columns(3);
   background-color: red;
   height: 400px;
   width: 226px;
 }
 
 .main {
-  @include span-columns(9);
+  @include outer-container;
   background-color: blue;
 }
 
 li {
-  @include span-columns(3 of 9);
-  background-color: green;
-
+  @include span-columns(3);
+    @include omega(3n);
+    position:relative;
+    height:220px;
+    width:220px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size:12px;
+    background-color: HSLA(0, 0%, 100%, 1);
 }
 
 .footer {
