@@ -15,35 +15,53 @@
   </head>
   <body>
 
-<div class="container">
-
-      <div class="header">
-          <h1>Etsy</h1>
-          <input type="text" name="input" value="" />
-          <button name="button">Search</button>
-          <button name="button">Browse Etsy</button>
-          <a href="#" >Register</a>
-          <button name="button">Sign In</button>
-          <a href="#" img src="">Pic of cart</a>
+      <div class="headerCon">
+        <div class="header">
+            <h1>Etsy</h1>
+            <input class="searchField" type="text" name="input" value="Search for items or shops" />
+            <button class="searchBtn" name="button">Search</button>
+            <button class="browseBtn" name="button">Browse</button>
+            <a href="#">Register</a>
+            <a class="signBox" href="#">Sign In</a>
+            <span class="cartBox">
+              <img src="http://f.cl.ly/items/0n1l2r0o223C0n0u3D0V/alisveris_sepeti.png"/>
+              <span>Cart</span>
+            </span>
+        </div>
       </div>
 
-      <div class="main">
+      <div class="contentCon">
 
-        <div class="sidebar">
+        <div class="main">
+
+          <div class="resultBar">
+            <span class="show"><b>Show results for:</b></span>
+            <span class="sort"><b>"whisky"</b> We found 18,202 items!</span>
+            <span><b>Sort by:</b> Relevancy</span>
+          </div>
+
+          <div class="sidebar">
+            <div class="top_area"
+              <h5>Item Type</h5>
+              <form action="">
+                <nav><input type="radio" name="all_items" value="male"> All Items</nav>
+                <nav><input type="radio" name="handmade" value="female"> Handmade</nav>
+                <nav><input type="radio" name="vintage" value="female"> Vintage</nav>
+                <nav><input type="radio" name="craft_supplies" value="female"> Craft Supplies</nav>
+              </form>
+            </div>
+          </div>
+
+          <ul id="drinks">
+          </ul>
+
+        </div>
+
+        <div class="footer">
           <p>Some Text</p>
         </div>
-        
-        <ul id="drinks">
-        </ul>
 
       </div>
-
-      <div class="footer">
-        <p>Some Text</p>
-      </div>
-
-
-    </div>
 
     <script src="scripts/vendor.js"></script>
 

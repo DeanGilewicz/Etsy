@@ -101,12 +101,10 @@ $(document).ready(function () {
 
   });
 
-  $('li').hover (
-
-  function () {
+  $('li').hover (function () {
     $(this).toggleClass('iconReveal');
   }
 
-);
+  );
 
 });
