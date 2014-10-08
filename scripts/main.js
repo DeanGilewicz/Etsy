@@ -76,30 +76,37 @@ $(document).ready(function () {
       itemPrice,
       itemSN,
       itemImage,
-      display;
+      display,
+      icons;
 
   items.results.forEach( function(x) {
 
-      itemTitle = "<p>" + x.title + "</p>";
+      icons = "<img class='icon1' src='" + 'https://raw.githubusercontent.com/tiy-atlanta-js/Assignments/master/Assignment%2008/assets/hamburger.png' + "'/>" + "<img class='icon2' src='" + 'https://raw.githubusercontent.com/tiy-atlanta-js/Assignments/master/Assignment%2008/assets/heart.png' + "'/>";
+
+      itemTitle = "<p class='it'>" + x.title + "</p>";
       // console.log(itemTitle);
 
-      itemPrice = "<p>" + x.price + " " + x.currency_code + "</p>";
+      itemPrice = "<p class='ip'>" + x.price + " " + x.currency_code + "</p>";
       // console.log(itemPrice);
 
-      itemSN = "<p>" + x.Shop.shop_name + "<p>";
+      itemSN = "<p class='isn'>" + x.Shop.shop_name + "<p>";
       // console.log(itemSN);
 
-      x.Images.forEach (function(y) {
-      itemImage = "<img src= '" + y.url_170x135 + "'/>'";
+      itemImage = "<img src= '" + x.Images[0].url_170x135 + "'/>'";
       // console.log(itemImage);
-      })
 
-      display = "<li>" + itemTitle + itemPrice + itemSN + itemImage + "</li>";
+      display = "<li>" + icons + itemImage + itemTitle + itemSN + itemPrice + "</li>";
 
       container.append(display);
 
   });
 
+  $('li').hover (
 
+  function () {
+    $(this).toggleClass('iconReveal');
+  }
+
+);
 
 });
