@@ -23,10 +23,11 @@ body {
 
 .header {
   margin-left: 170px;
+  padding-bottom: 20px;
 
   h1 {
     display: inline-block;
-    margin-right: 25px;
+    margin: 10px 25px 10px 0px;
   }
 
   .searchField {
@@ -45,6 +46,49 @@ body {
     margin-left: -6px;
     color: HSLA(0, 0%, 100%, 1);
   }
+
+  .browseBtn {
+    background-color: HSLA(0, 0%, 100%, 1);
+    border: 1px solid HSLA(0, 0%, 90%, 1);
+    padding: 4px 10px 6px 10px;
+    margin-left: 15px;
+    margin-right: 250px;
+    font-size: 14px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 14px;
+    color: HSLA(193, 99%, 37%, 1);
+  }
+
+  .signBox {
+      border: 1px solid HSLA(192, 99%, 36%, 1);
+      border-radius: 3px;
+      padding: 10px;
+      margin-left: 5px;
+  }
+
+  .cartBox {
+    display: inline-block;
+    margin: 0px 0px 0px 25px;
+    padding-top: 0px;
+
+    img {
+      display: block;
+      padding-top: 30px;
+      width: 20%;
+      margin: 0px;
+    }
+
+    span {
+      margin: 0px;
+      padding-left: 2px;
+      font-size: 12px;
+
+    }
+  }
+
 }
 
 .contentCon {
