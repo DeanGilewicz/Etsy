@@ -16,10 +16,22 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.sidebar {
-  background-color: red;
-  height: 400px;
-  width: 226px;
+.headerCon {
+  width: 100%;
+  background-color: HSLA(0, 0%, 100%, 1);
+}
+
+.header {
+  margin-left: 200px;
+
+  h1 {
+    display: inline-block;
+  }
+}
+
+.contentCon {
+  width: 100%;
+  background-color: HSLA(60, 17%, 95%, 1);
 }
 
 .main {
@@ -27,15 +39,24 @@ body {
   background-color: HSLA(60, 17%, 95%, 1);
 }
 
+.resultBar {
+  height: 40px;
+  width: 100%;
+
+}
+
 .sidebar {
-  float: left;
+  @include span-columns(3);
   border-radius: 4px;
+  height: 2200px;
+  width: 220px;
+  margin-left: 60px;
   background-color: HSLA(0, 0%, 100%, 1);
 }
 
 li {
   @include span-columns(3);
-  @include omega(3n);
+  // @include omega(3n);
   margin-top: 25px;
   position: relative;
   height: 220px;
@@ -111,7 +132,6 @@ li:hover {
   box-shadow: 0 0 1em HSLA(206, 15%, 82%, 1);
   border: 1px solid HSLA(206, 15%, 82%, 1);
 }
-
 
 .footer {
   clear: both;
