@@ -24,81 +24,92 @@ body {
 
 .main {
   @include outer-container;
-  background-color: blue;
+  background-color: HSLA(60, 17%, 95%, 1);
+}
+
+.sidebar {
+  float: left;
+  border-radius: 4px;
+  background-color: HSLA(0, 0%, 100%, 1);
 }
 
 li {
   @include span-columns(3);
-    @include omega(3n);
-    position: relative;
-    height: 220px;
-    width: 220px;
-    border: 2px solid black;
-    border-radius: 4px;
-    font-size: 12px;
+  @include omega(3n);
+  margin-top: 25px;
+  position: relative;
+  height: 220px;
+  width: 220px;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: HSLA(0, 0%, 100%, 1);
+
+  .icon1 {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    height: 23px;
+    width: 23px;
+    border: 1px solid HSLA(219, 13%, 78%, 1);
+    border-radius: 3px;
     background-color: HSLA(0, 0%, 100%, 1);
+    padding: 2px;
+    display: none;
+  }
 
-    .icon1 {
-      position: absolute;
-      top: 5px;
-      right: 10px;
-      height: 23px;
-      width: 23px;
-      border: 1px solid HSLA(219, 13%, 78%, 1);
-      border-radius: 3px;
-      background-color: HSLA(0, 0%, 100%, 1);
-      padding: 2px;
-      display: none;
-    }
+  .icon2 {
+    position: absolute;
+    top: 5px;
+    right: 40px;
+    height: 23px;
+    width: 23px;
+    border: 1px solid HSLA(219, 13%, 78%, 1);
+    border-radius: 3px;
+    background-color: HSLA(0, 0%, 100%, 1);
+    padding: 2px;
+    display: none;
+  }
 
-    .icon2 {
-      position: absolute;
-      top: 5px;
-      right: 40px;
-      height: 23px;
-      width: 23px;
-      border: 1px solid HSLA(219, 13%, 78%, 1);
-      border-radius: 3px;
-      background-color: HSLA(0, 0%, 100%, 1);
-      padding: 2px;
-      display: none;
-    }
+  &.iconReveal .icon1,
+  &.iconReveal .icon2, {
+    display: inline-block;
+  }
 
-    &.iconReveal .icon1,
-    &.iconReveal .icon2, {
-      display: inline-block;
-    }
+  img {
+    height: 170px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
 
-    img {
-      height: 170px;
-      width: 100%;
-      display: block;
-      margin: 0 auto;
-    }
+  p {
+    margin: 0px;
+  }
 
-    p {
-      margin: 0px;
-    }
+  .it {
+    @include truncate;
+    color: HSLA(0, 0%, 40%, 1);
+    margin-left: 5px;
+  }
 
-    .it {
-      @include truncate;
-      color: HSLA(0, 0%, 40%, 1);
-      margin-left: 5px;
-    }
+  .isn{
+    float: left;
+    color: HSLA(240, 12%, 73%, 1);
+    margin-top: 2px;
+    margin-left: 5px;
+  }
 
-    .isn{
-      float: left;
-      color: HSLA(240, 12%, 73%, 1);
-      margin-top: 2px;
-      margin-left: 5px;
-    }
+  .ip {
+    float: right;
+    color: HSLA(94, 50%, 51%, 1);
+    margin-top: 2px;
+  }
 
-    .ip{
-      float: right;
-      color: HSLA(94, 50%, 51%, 1);
-      margin-top: 2px;
-    }
+}
 
+li:hover {
+  box-shadow: 0 0 1em HSLA(206, 15%, 82%, 1);
+  border: 1px solid HSLA(206, 15%, 82%, 1);
 }
 
 
