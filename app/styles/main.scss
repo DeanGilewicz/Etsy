@@ -48,23 +48,31 @@ li {
       border-radius: 3px;
       background-color: HSLA(0, 0%, 100%, 1);
       padding: 2px;
-      // display: none;
+      display: none;
     }
 
     .icon2 {
-    position: absolute;
-    top: 5px;
-    right: 40px;
-    height: 23px;
-    width: 23px;
-    border: 1px solid HSLA(219, 13%, 78%, 1);
-    border-radius: 3px;
-    background-color: HSLA(0, 0%, 100%, 1);
-    padding: 2px;
-    // display: none;
+      position: absolute;
+      top: 5px;
+      right: 40px;
+      height: 23px;
+      width: 23px;
+      border: 1px solid HSLA(219, 13%, 78%, 1);
+      border-radius: 3px;
+      background-color: HSLA(0, 0%, 100%, 1);
+      padding: 2px;
+      display: none;
+    }
+
+    &.iconReveal .icon1,
+    &.iconReveal .icon2, {
+      display: inline-block;
     }
 
 }
+
+
+
 
 .footer {
   clear: both;
