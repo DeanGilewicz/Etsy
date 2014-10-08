@@ -81,23 +81,27 @@ $(document).ready(function () {
       itemTitle = "<p>" + x.title + "</p>";
       // console.log(itemTitle);
 
-      itemPrice = "<p>" + x.price + " " + x.currency_code + "</p>";
+      itemPrice = "<p class='price'>" + x.price + " " + x.currency_code + "</p>";
       // console.log(itemPrice);
 
-      itemSN = "<p>" + x.Shop.shop_name + "<p>";
+      itemSN = "<p class='store'>" + x.Shop.shop_name + "<p>";
       // console.log(itemSN);
 
       x.Images.forEach (function(y) {
-      itemImage = "<img src= '" + y.url_170x135 + "'/>'";
+      itemImage = "<img class='pics' src= '" + y.url_170x135 + "'/>'";
       // console.log(itemImage);
-      })
+      });
 
-      display = "<li>" + itemTitle + itemPrice + itemSN + itemImage + "</li>";
+      display = "<li>" + itemImage + itemTitle + itemSN + itemPrice + "</li>";
 
       container.append(display);
 
   });
 
-
+    $('img').hover(function() {
+      $(this).addClass("hover");
+      }, function() {
+      $(this).removeClass("hover");
+    });
 
 });
