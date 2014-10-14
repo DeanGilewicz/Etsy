@@ -1,3 +1,3 @@
-## Yo, I'm a Readme
+## Etsy - Static Data From API
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+Recreated the Etsy products section using static API and iterating through array using JavaScript. Layout using SASS, Bourbon Neat, and hover effect using jQuery.
