@@ -2,7 +2,7 @@
 
 Recreated the Etsy products section using API.
 
-Iterated through array using JavaScript. Layout using SASS, Bourbon Neat, and hover effect using jQuery.
+Iterated through array using JavaScript.
 
 To Use:
 * Clone my repo
@@ -12,3 +12,7 @@ To Use:
 Libraries:
 * jQuery
 * Underscore
+* Bourbon neat
+
+Deployment:
+* GH-pages
